@@ -1,6 +1,10 @@
 # Mieterportal
 
 Static HTML/CSS/JS prototype of a tenant portal for the Swiss **Bundesamt für Bauten und Logistik (BBL)**. German UI, no framework, no build step — open the files directly.
+## Beschreibung
+Dieses Projekt zeigt beispielhaft, wie das Mieterportal strukturiert und gestaltet werden könnte. Es wurden nicht alle möglichen Seiten umgesetzt, sondern nur die wichtigsten Bereiche, zum Beispiel die Startseite, Dienstleistungen, Informationen, Meine Anträge und Kommunikation.
+
+Im Rahmen des Auftrags von Franka habe ich einen Prototyp erstellt, der veranschaulicht, wie das Mieterportal aussehen und aufgebaut sein könnte. Einige Inhalte und Funktionen dienen dabei nur als Beispiele und können später noch ergänzt oder angepasst werden.
 
 ## Run
 
