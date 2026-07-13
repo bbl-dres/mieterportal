@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mieterportal - Antrag</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-container">
+
+        <div class="logo-box">
+            <div class="swiss-logo">+</div>
+
+            <div>
+                <strong>Bundesamt für Bauten und Logistik BBL</strong>
+                <p>Mieterportal</p>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="startseite.html">Startseite</a>
+            <a href="Dienstleistungen.html">Dienstleistungen</a>
+            <a href="Meine-antrage.html" class="active">Meine Anträge</a>
+            <a href="informationen.html">Informationen</a>
+            <a href="#">Hilfe</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="main-container application-detail-page">
+
+    <!-- =====================================================
+         SEITENKOPF
+         ===================================================== -->
+    <section class="application-detail-top">
+
+        <div>
+            <p class="small-title">Antrag</p>
+
+            <h1>Raumbedarf und bauliche Bedürfnisse</h1>
+
+            <p class="intro-text">
+                Antrag Nr. RB-2026-001 · Unterbringung
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AKTUELLER STATUS
+         Variante aktuell: Rückfrage offen
+         ===================================================== -->
+    <section class="application-status-clean status-needs-answer">
+
+        <div class="status-main">
+
+            <p class="small-title">Aktueller Status</p>
+
+            <div class="status-heading-row">
+                <h2>Rückfrage offen</h2>
+                <span class="tag red">Antwort erforderlich</span>
+            </div>
+
+            <p>
+                Zu diesem Antrag liegt eine Rückfrage vor. Bitte beantworten Sie die Nachricht.
+            </p>
+
+        </div>
+
+        <div class="status-actions">
+            <a href="antrag.html" class="btn btn-primary">
+                Rückfrage beantworten
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HINWEIS:
+         Wenn du später einen anderen Status zeigen willst,
+         ersetze nur den Block oben durch einen dieser Blöcke.
+         Diese Blöcke hier NICHT gleichzeitig anzeigen.
+         ===================================================== -->
+
+    <!--
+
+    STATUS: IN PRÜFUNG
+
+    <section class="application-status-clean status-in-progress">
+
+        <div class="status-main">
+
+            <p class="small-title">Aktueller Status</p>
+
+            <div class="status-heading-row">
+                <h2>In Prüfung</h2>
+                <span class="tag">In Prüfung</span>
+            </div>
+
+            <p>
+                Der Antrag wurde eingereicht und wird aktuell durch die zuständige Stelle geprüft.
+            </p>
+
+        </div>
+
+        <div class="status-actions">
+            <a href="antrag.html" class="btn btn-secondary">
+                Frage zum Antrag stellen
+            </a>
+        </div>
+
+    </section>
+
+    -->
+
+
+    <!--
+
+    STATUS: ÜBERARBEITUNG ERFORDERLICH
+
+    <section class="application-status-clean status-needs-change">
+
+        <div class="status-main">
+
+            <p class="small-title">Aktueller Status</p>
+
+            <div class="status-heading-row">
+                <h2>Überarbeitung erforderlich</h2>
+                <span class="tag red">Änderung erforderlich</span>
+            </div>
+
+            <p>
+                Der Antrag muss angepasst werden, bevor er erneut eingereicht werden kann.
+            </p>
+
+        </div>
+
+        <div class="status-actions">
+            <a href="raumbedarf-antrag.html" class="btn btn-primary">
+                Antrag überarbeiten
+            </a>
+        </div>
+
+    </section>
+
+    -->
+
+
+    <!--
+
+    STATUS: ABGESCHLOSSEN
+
+    <section class="application-status-clean status-completed">
+
+        <div class="status-main">
+
+            <p class="small-title">Aktueller Status</p>
+
+            <div class="status-heading-row">
+                <h2>Abgeschlossen</h2>
+                <span class="tag green">Abgeschlossen</span>
+            </div>
+
+            <p>
+                Der Antrag wurde abgeschlossen. Details, Dokumente und Kommunikation bleiben verfügbar.
+            </p>
+
+        </div>
+
+        <div class="status-actions status-actions-small">
+            <a href="#antragsdaten" class="btn btn-secondary btn-small">
+                Details
+            </a>
+
+            <a href="antrag.html" class="btn btn-secondary btn-small">
+                Kommunikation
+            </a>
+        </div>
+
+    </section>
+
+    -->
+
+
+    <!-- =====================================================
+         SCHNELLAKTIONEN
+         ===================================================== -->
+    <section class="application-quick-actions">
+
+        <a href="Meine-antrage.html" class="quick-action-link">
+            ← Zurück zu Meine Anträge
+        </a>
+
+        <a href="antrag.html" class="quick-action-link">
+            Kommunikation öffnen →
+        </a>
+
+    </section>
+
+
+    <!-- =====================================================
+         ANTRAGSDATEN
+         ===================================================== -->
+    <section class="application-data-clean" id="antragsdaten">
+
+        <div class="application-data-header">
+
+            <div>
+                <p class="small-title">Antragsdaten</p>
+
+                <h2>Details zum Antrag</h2>
+            </div>
+
+            <a href="raumbedarf-antrag.html" class="btn btn-secondary btn-small">
+                Antrag bearbeiten
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             GRUNDDATEN
+             ================================================= -->
+        <details class="application-accordion-clean" open>
+
+            <summary>
+                <div>
+                    <span>Grunddaten</span>
+                    <p>Objekt, Organisation und Kontaktperson</p>
+                </div>
+            </summary>
+
+            <div class="accordion-clean-content">
+
+                <div class="detail-field-grid">
+
+                    <div class="detail-field-clean">
+                        <span>Objektbezeichnung</span>
+                        <strong>Bundeshaus West</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Objekt-ID</span>
+                        <strong>OBJ-1045</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Adresse</span>
+                        <strong>Bundesgasse 1</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Ort</span>
+                        <strong>Bern</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Gebäude</span>
+                        <strong>3. Stock</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Raum oder Bereich</span>
+                        <strong>Sitzungszimmer</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Bundesamt / Organisation</span>
+                        <strong>Bundesamt / Organisation</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Abteilung</span>
+                        <strong>Abteilung Infrastruktur</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>Kontaktperson</span>
+                        <strong>Max Muster</strong>
+                    </div>
+
+                    <div class="detail-field-clean">
+                        <span>E-Mail</span>
+                        <strong>max.muster@example.ch</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </details>
+
+
+        <!-- =================================================
+             BESCHREIBUNG
+             ================================================= -->
+        <details class="application-accordion-clean">
+
+            <summary>
+                <div>
+                    <span>Beschreibung</span>
+                    <p>Ausgangslage, Bedarf und Auswirkungen</p>
+                </div>
+            </summary>
+
+            <div class="accordion-clean-content">
+
+                <div class="text-preview-clean">
+                    <h3>Ausgangslage</h3>
+
+                    <p>
+                        Text eingeben. Hier wird die Ausgangslage des Antrags angezeigt.
+                    </p>
+                </div>
+
+                <div class="text-preview-clean">
+                    <h3>Bedarf und Ziel</h3>
+
+                    <p>
+                        Text eingeben. Hier wird der Raumbedarf oder das bauliche Bedürfnis beschrieben.
+                    </p>
+                </div>
+
+                <div class="text-preview-clean">
+                    <h3>Auswirkungen</h3>
+
+                    <p>
+                        Text eingeben. Hier werden Auswirkungen auf Betrieb, Räume oder Nutzung beschrieben.
+                    </p>
+                </div>
+
+            </div>
+
+        </details>
+
+
+        <!-- =================================================
+             WEITERE ANGABEN
+             ================================================= -->
+        <details class="application-accordion-clean">
+
+            <summary>
+                <div>
+                    <span>Weitere Angaben</span>
+                    <p>Zusätzliche Informationen zum Antrag</p>
+                </div>
+            </summary>
+
+            <div class="accordion-clean-content">
+
+                <p class="placeholder-text">
+                    Weitere Angaben zum Antrag werden hier angezeigt.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- =================================================
+             BEILAGEN
+             ================================================= -->
+        <details class="application-accordion-clean">
+
+            <summary>
+                <div>
+                    <span>Beilagen</span>
+                    <p>Dokumente und Dateien</p>
+                </div>
+            </summary>
+
+            <div class="accordion-clean-content">
+
+                <div class="document-list-clean">
+
+                    <div class="document-item-clean">
+                        <span class="document-icon">📄</span>
+
+                        <div>
+                            <strong>Raumplan.pdf</strong>
+                            <p>Hochgeladen am 01.07.2026</p>
+                        </div>
+
+                        <a href="#">Öffnen</a>
+                    </div>
+
+                    <div class="document-item-clean">
+                        <span class="document-icon">📄</span>
+
+                        <div>
+                            <strong>Zusätzliche Angaben.docx</strong>
+                            <p>Hochgeladen am 01.07.2026</p>
+                        </div>
+
+                        <a href="#">Öffnen</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </details>
+
+    </section>
+
+
+    <!-- =====================================================
+         UNTERE AKTIONEN
+         ===================================================== -->
+    <section class="bottom-action-bar-clean">
+
+        <a href="Meine-antrage.html" class="btn btn-secondary">
+            Zurück
+        </a>
+
+        <a href="antrag.html" class="btn btn-secondary">
+            Kommunikation öffnen
+        </a>
+
+        <a href="raumbedarf-antrag.html" class="btn btn-primary">
+            Antrag bearbeiten
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <p>Bundesamt für Bauten und Logistik BBL · Mieterportal</p>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

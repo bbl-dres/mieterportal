@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mieterportal - Raumbedarf Antrag</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+    <header class="header">
+        <div class="header-container">
+
+            <div class="logo-box">
+                <div class="swiss-logo">+</div>
+
+                <div>
+                    <strong>Bundesamt für Bauten und Logistik BBL</strong>
+                    <p>Mieterportal</p>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <a href="startseite.html">Startseite</a>
+                <a href="Dienstleistungen.html" class="active">Dienstleistungen</a>
+                <a href="Meine-antrage.html">Meine Anträge</a>
+                <a href="informationen.html">Informationen</a>
+                <a href="#">Hilfe</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         HAUPTBEREICH
+         ===================================================== -->
+    <main class="main-container">
+
+        <!-- =================================================
+             SEITENINTRO
+             ================================================= -->
+        <section class="page-intro">
+
+            <p class="small-title">Antrag erstellen</p>
+
+            <h1>Raumbedarf und bauliche Bedürfnisse</h1>
+
+            <p class="intro-text">
+                Erfassen Sie hier einen kleinen oder grossen Antrag.
+                Die Angaben werden Schritt für Schritt ausgefüllt und
+                anschliessend zur Prüfung eingereicht.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             FORMULAR-LAYOUT
+             ================================================= -->
+        <section class="wizard-layout">
+
+            <!-- =================================================
+                 LINKE HAUPTSPALTE
+                 ================================================= -->
+            <div class="panel">
+
+                <!-- =============================================
+                     FORTSCHRITTSANZEIGE
+                     ============================================= -->
+				<div class="progress-steps">
+
+					<div class="progress-step active" data-step="1">
+						<div class="progress-circle">1</div>
+						<div class="progress-label">Antragsart</div>
+					</div>
+
+					<div class="progress-step" data-step="2">
+						<div class="progress-circle">2</div>
+						<div class="progress-label">Grunddaten</div>
+					</div>
+
+					<div class="progress-step" data-step="3">
+						<div class="progress-circle">3</div>
+						<div class="progress-label">Beschreibung</div>
+					</div>
+
+					<div class="progress-step" data-step="4">
+						<div class="progress-circle">4</div>
+						<div class="progress-label">Weitere Angaben</div>
+					</div>
+
+					<div class="progress-step" data-step="5">
+						<div class="progress-circle">5</div>
+						<div class="progress-label">Abschluss</div>
+					</div>
+
+					<div class="progress-step" data-step="6">
+						<div class="progress-circle">6</div>
+						<div class="progress-label">Prüfen</div>
+					</div>
+
+				</div>
+
+
+                <!-- =================================================
+                     SCHRITT 1: ANTRAGSART
+                     ================================================= -->
+                <section class="form-step active" id="step-1">
+
+                    <h2>Antragsart</h2>
+
+                    <p class="text-muted">
+                        Wählen Sie aus, ob Sie einen kleinen oder grossen Antrag
+                        erfassen möchten.
+                    </p>
+
+                    <div class="choice-grid">
+
+                        <label class="choice-card">
+                            <input type="radio" name="antragsgroesse" value="klein">
+
+                            <div>
+                                <strong>Kleiner Antrag</strong>
+                                <small>
+                                    Für Anträge bis CHF [Betrag ergänzen].
+                                </small>
+                            </div>
+                        </label>
+
+
+                        <label class="choice-card">
+                            <input type="radio" name="antragsgroesse" value="gross">
+
+                            <div>
+                                <strong>Grosser Antrag</strong>
+                                <small>
+                                    Für Anträge ab CHF [Betrag ergänzen].
+                                </small>
+                            </div>
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-section">
+
+                        <div class="form-field full">
+                            <label for="antragsgroesse-beschreibung">
+                                Zusätzliche Angaben zur Antragsgrösse
+                            </label>
+
+                            <small>
+                                Beschreiben Sie kurz, wie gross oder umfangreich
+                                der Antrag ist.
+                            </small>
+
+                            <textarea
+                                id="antragsgroesse-beschreibung"
+                                placeholder="Text eingeben"
+                            ></textarea>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SCHRITT 2: GRUNDDATEN
+                     ================================================= -->
+                <section class="form-step" id="step-2">
+
+    <h2>Grunddaten</h2>
+
+    <p class="step-description">
+        Erfassen Sie die wichtigsten Angaben zum Objekt, zur Organisation und zur Kontaktperson.
+    </p>
+
+
+    <!-- =================================================
+         OBJEKTDATEN
+         ================================================= -->
+    <div class="form-section-card">
+
+        <div class="form-section-header">
+            <div class="form-section-icon">🏢</div>
+
+            <div>
+                <h3>Objektdaten</h3>
+                <p>Angaben zum betroffenen Objekt oder Bereich.</p>
+            </div>
+        </div>
+
+        <div class="compact-form-grid">
+
+            <label class="sr-only" for="objektbezeichnung">Objektbezeichnung</label>
+            <input 
+                id="objektbezeichnung" 
+                type="text" 
+                placeholder="Objektbezeichnung"
+            >
+
+            <label class="sr-only" for="objekt-id">Objekt-ID</label>
+            <input 
+                id="objekt-id" 
+                type="text" 
+                placeholder="Objekt-ID"
+            >
+
+            <label class="sr-only" for="adresse">Adresse</label>
+            <input 
+                id="adresse" 
+                type="text" 
+                placeholder="Adresse"
+            >
+
+            <label class="sr-only" for="ort">Ort</label>
+            <input 
+                id="ort" 
+                type="text" 
+                placeholder="Ort"
+            >
+
+            <label class="sr-only" for="gebaeude">Gebäude</label>
+            <input 
+                id="gebaeude" 
+                type="text" 
+                placeholder="Gebäude"
+            >
+
+            <label class="sr-only" for="raum">Raum oder Bereich</label>
+            <input 
+                id="raum" 
+                type="text" 
+                placeholder="Raum oder Bereich"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         ORGANISATION
+         ================================================= -->
+    <div class="form-section-card">
+
+        <div class="form-section-header">
+            <div class="form-section-icon">🏛️</div>
+
+            <div>
+                <h3>Organisation</h3>
+                <p>Angaben zur zuständigen Organisationseinheit.</p>
+            </div>
+        </div>
+
+        <div class="compact-form-grid">
+
+            <label class="sr-only" for="bundesamt">Bundesamt / Organisation</label>
+            <input 
+                id="bundesamt" 
+                type="text" 
+                placeholder="Bundesamt / Organisation"
+            >
+
+            <label class="sr-only" for="abteilung">Abteilung</label>
+            <input 
+                id="abteilung" 
+                type="text" 
+                placeholder="Abteilung"
+            >
+
+            <label class="sr-only" for="kostenstelle">Kostenstelle</label>
+            <input 
+                id="kostenstelle" 
+                type="text" 
+                placeholder="Kostenstelle"
+            >
+
+            <label class="sr-only" for="organisationseinheit">Organisationseinheit</label>
+            <input 
+                id="organisationseinheit" 
+                type="text" 
+                placeholder="Organisationseinheit"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         KONTAKTPERSON
+         ================================================= -->
+    <!-- =================================================
+     KONTAKTPERSON
+     ================================================= -->
+<div class="form-section-card">
+
+    <div class="form-section-header">
+        <div class="form-section-icon">👤</div>
+
+        <div>
+            <h3>Kontaktperson</h3>
+            <p>Kontaktangaben für Rückfragen zum Antrag.</p>
+        </div>
+    </div>
+
+    <div class="compact-form-grid">
+
+        <label class="sr-only" for="vorname">Vorname</label>
+        <input 
+            id="vorname" 
+            type="text" 
+            placeholder="Vorname"
+        >
+
+        <label class="sr-only" for="nachname">Nachname</label>
+        <input 
+            id="nachname" 
+            type="text" 
+            placeholder="Nachname"
+        >
+
+        <label class="sr-only" for="funktion">Funktion</label>
+        <input 
+            id="funktion" 
+            type="text" 
+            placeholder="Funktion"
+        >
+
+        <label class="sr-only" for="telefon">Telefonnummer</label>
+        <input 
+            id="telefon" 
+            type="tel" 
+            placeholder="Telefonnummer"
+        >
+
+        <label class="sr-only" for="email">E-Mail</label>
+        <input 
+            id="email" 
+            class="full-row"
+            type="email" 
+            placeholder="E-Mail"
+        >
+
+    </div>
+
+</div>
+</section>
+                <!-- =================================================
+                     SCHRITT 3: BESCHREIBUNG DES ANTRAGS
+                     ================================================= -->
+                <section class="form-step" id="step-3">
+
+                    <h2>Beschreibung des Antrags</h2>
+
+                    <p class="text-muted">
+                        Beschreiben Sie die Ausgangslage, den Bedarf und
+                        mögliche Auswirkungen des Antrags.
+                    </p>
+
+
+                    <div class="form-field full">
+                        <label for="ausgangslage">Ausgangslage</label>
+
+                        <small>
+                            Beschreiben Sie die aktuelle Situation und den Grund
+                            für den Antrag.
+                        </small>
+
+                        <textarea
+                            id="ausgangslage"
+                            placeholder="Text eingeben"
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-field full">
+                        <label for="bedarf">Bedarf und Ziel</label>
+
+                        <small>
+                            Beschreiben Sie, welcher Bedarf besteht und welches
+                            Ziel erreicht werden soll.
+                        </small>
+
+                        <textarea
+                            id="bedarf"
+                            placeholder="Text eingeben"
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-field full">
+                        <label for="konsequenzen">Auswirkungen und Konsequenzen</label>
+
+                        <small>
+                            Beschreiben Sie mögliche Auswirkungen auf Räume,
+                            Mitarbeitende, Betrieb oder Termine.
+                        </small>
+
+                        <textarea
+                            id="konsequenzen"
+                            placeholder="Text eingeben"
+                        ></textarea>
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SCHRITT 4: WEITERE ANGABEN
+                     ================================================= -->
+                <section class="form-step" id="step-4">
+
+                    <h2>Weitere Angaben</h2>
+
+                    <p class="text-muted">
+                        Ergänzen Sie weitere Informationen zum Antrag.
+                    </p>
+
+
+                    <div class="form-field full">
+                        <label for="block1">Überschrift 1</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block1" placeholder="Text eingeben"></textarea>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="block2">Überschrift 2</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block2" placeholder="Text eingeben"></textarea>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="block3">Überschrift 3</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block3" placeholder="Text eingeben"></textarea>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="block4">Überschrift 4</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block4" placeholder="Text eingeben"></textarea>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="block5">Überschrift 5</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block5" placeholder="Text eingeben"></textarea>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="block6">Überschrift 6</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block6" placeholder="Text eingeben"></textarea>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="block7">Überschrift 7</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea id="block7" placeholder="Text eingeben"></textarea>
+                    </div>
+
+
+                    <div class="form-section">
+
+                        <h3>Auswahl</h3>
+
+                        <p class="text-muted">
+                            Wählen Sie eine passende Option aus.
+                        </p>
+
+                        <div class="choice-grid">
+
+                            <label class="choice-card">
+                                <input type="radio" name="auswahl" value="option1">
+
+                                <div>
+                                    <strong>Option 1</strong>
+                                    <small>Beschreibung ergänzen.</small>
+                                </div>
+                            </label>
+
+                            <label class="choice-card">
+                                <input type="radio" name="auswahl" value="option2">
+
+                                <div>
+                                    <strong>Option 2</strong>
+                                    <small>Beschreibung ergänzen.</small>
+                                </div>
+                            </label>
+
+                            <label class="choice-card">
+                                <input type="radio" name="auswahl" value="option3">
+
+                                <div>
+                                    <strong>Option 3</strong>
+                                    <small>Beschreibung ergänzen.</small>
+                                </div>
+                            </label>
+
+                            <label class="choice-card">
+                                <input type="radio" name="auswahl" value="nicht-zutreffend">
+
+                                <div>
+                                    <strong>Nicht zutreffend</strong>
+                                    <small>Beschreibung ergänzen.</small>
+                                </div>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SCHRITT 5: ABSCHLUSS UND BEILAGEN
+                     ================================================= -->
+                <section class="form-step" id="step-5">
+
+                    <h2>Abschluss und Beilagen</h2>
+
+                    <p class="text-muted">
+                        Ergänzen Sie die abschliessenden Angaben und laden Sie
+                        falls nötig Beilagen hoch.
+                    </p>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="datum">Datum</label>
+                            <input type="date" id="datum">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="unterschrift">Name / Unterschrift</label>
+                            <input
+                                type="text"
+                                id="unterschrift"
+                                placeholder="Text eingeben"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-section">
+
+                        <h3>Beilagen</h3>
+
+                        <div class="upload-area">
+                            Dateien hier hochladen oder auswählen.
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-field full">
+                        <label for="bemerkung1">Zusätzliche Bemerkungen</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea
+                            id="bemerkung1"
+                            placeholder="Text eingeben"
+                        ></textarea>
+                    </div>
+
+
+                    <div class="form-field full">
+                        <label for="bemerkung2">Hinweise zu den Beilagen</label>
+                        <small>Beschreibung ergänzen.</small>
+                        <textarea
+                            id="bemerkung2"
+                            placeholder="Text eingeben"
+                        ></textarea>
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SCHRITT 6: PRÜFEN UND ABSENDEN
+                     ================================================= -->
+                <section class="form-step" id="step-6">
+
+                    <h2>Prüfen und Absenden</h2>
+
+                    <p class="text-muted">
+                        Prüfen Sie alle Angaben, bevor Sie den Antrag absenden.
+                    </p>
+
+
+                    <div class="placeholder-block">
+                        Hier werden später alle eingegebenen Daten zur Prüfung angezeigt.
+                    </div>
+
+
+                    <div class="placeholder-block">
+                        Antragsart, Grunddaten, Beschreibung, weitere Angaben,
+                        Beilagen und Bestätigung werden hier zusammengefasst.
+                    </div>
+
+
+                    <div class="form-field full">
+                        <label>
+                            <input type="checkbox">
+                            Ich bestätige, dass die Angaben vollständig und korrekt sind.
+                        </label>
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     NAVIGATION UNTEN
+                     ================================================= -->
+                <div class="wizard-actions">
+
+                    <button class="btn btn-secondary" id="prevStepBtn">
+                        Zurück
+                    </button>
+
+                    <button class="btn btn-secondary">
+                        Als Entwurf speichern
+                    </button>
+
+                    <button class="btn btn-primary" id="nextStepBtn">
+                        Weiter
+                    </button>
+
+                </div>
+
+            </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

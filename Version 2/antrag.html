@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mieterportal - Kommunikation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <div class="logo-box">
+            <div class="swiss-logo">+</div>
+            <div>
+                <strong>Bundesamt für Bauten und Logistik BBL</strong>
+                <p>Mieterportal</p>
+            </div>
+        </div>
+        <nav class="navigation" aria-label="Hauptnavigation">
+            <a href="startseite.html">Startseite</a>
+            <a href="Dienstleistungen.html">Dienstleistungen</a>
+            <a href="Meine-antrage.html" class="active">Meine Anträge</a>
+            <a href="informationen.html">Informationen</a>
+            <a href="#">Hilfe</a>
+        </nav>
+    </div>
+</header>
+<main class="main-container mail-chat-page">
+    <section class="mail-chat-heading">
+        <div>
+            <p class="small-title">Kommunikation</p>
+            <h1>Nachrichten zu Ihren Anträgen</h1>
+            <p class="intro-text">Wählen Sie links eine Unterhaltung. Systemordner sortieren Chats automatisch; eigene Kategorien können automatisch oder manuell befüllt werden.</p>
+        </div>
+        <a href="Meine-antrage.html" class="btn btn-secondary btn-small">Zu Meine Anträge</a>
+    </section>
+
+    <section class="mail-chat-layout" aria-label="Kommunikationsbereich">
+        <aside class="chat-sidebar">
+            <div class="chat-sidebar-top">
+                <label class="chat-search-label" for="chatSearch">Chats suchen</label>
+                <input id="chatSearch" type="search" placeholder="Antrag oder Nachricht suchen">
+            </div>
+
+            <nav class="chat-folders" aria-label="Chat-Ordner">
+                <div class="chat-folder-group">
+                    <p class="chat-folder-title">Systemordner</p>
+                    <button class="chat-folder active" type="button" data-chat-filter="alle"><span>Alle</span><strong data-folder-count="alle">0</strong></button>
+                    <button class="chat-folder" type="button" data-chat-filter="rueckfragen"><span>Rückfragen</span><strong data-folder-count="rueckfragen">0</strong></button>
+                    <button class="chat-folder" type="button" data-chat-filter="pruefung"><span>In Prüfung</span><strong data-folder-count="pruefung">0</strong></button>
+                    <button class="chat-folder" type="button" data-chat-filter="offen"><span>Offen</span><strong data-folder-count="offen">0</strong></button>
+                    <button class="chat-folder" type="button" data-chat-filter="abgeschlossen"><span>Abgeschlossen</span><strong data-folder-count="abgeschlossen">0</strong></button>
+                </div>
+
+                <div class="chat-folder-group">
+                    <div class="chat-folder-title-row">
+                        <p class="chat-folder-title">Eigene Kategorien</p>
+                        <button id="showFolderFormBtn" class="chat-folder-add" type="button" aria-label="Kategorie erstellen">＋</button>
+                    </div>
+                    <div id="customFolderList"></div>
+                </div>
+            </nav>
+
+            <form id="createFolderForm" class="chat-folder-form" hidden>
+                <label for="folderName">Name</label>
+                <input id="folderName" type="text" maxlength="35" placeholder="z. B. Wichtig" required>
+                <label for="folderRule">Welche Chats werden angezeigt?</label>
+                <select id="folderRule">
+                    <option value="manual">Manuell zuweisen</option>
+                    <option value="rueckfragen">Nur Rückfragen</option>
+                    <option value="pruefung">Nur Chats in Prüfung</option>
+                    <option value="offen">Nur offene Chats</option>
+                    <option value="abgeschlossen">Nur abgeschlossene Chats</option>
+                </select>
+                <div class="chat-folder-form-actions">
+                    <button type="button" class="btn btn-secondary btn-small" id="cancelFolderBtn">Abbrechen</button>
+                    <button type="submit" class="btn btn-primary btn-small">Erstellen</button>
+                </div>
+            </form>
+
+            <div id="chatList" class="chat-list" aria-live="polite"></div>
+        </aside>
+
+        <section class="chat-workspace" aria-live="polite">
+            <header class="chat-workspace-header">
+                <div>
+                    <div class="chat-header-line">
+                        <span id="activeChatStatus" class="tag red">Rückfrage offen</span>
+                        <span id="activeChatNumber" class="chat-case-number">RB-2026-001</span>
+                    </div>
+                    <h2 id="activeChatTitle">Raumbedarf und bauliche Bedürfnisse</h2>
+                    <p id="activeChatSubtitle">Unterbringung · Bundeshaus West</p>
+                </div>
+                <div class="chat-workspace-actions">
+                    <label class="chat-category-assignment" for="chatCategorySelect">
+                        Eigene Kategorie
+                        <select id="chatCategorySelect"></select>
+                    </label>
+                    <a href="antrag-detail.html" class="btn btn-secondary btn-small">Antrag anzeigen</a>
+                </div>
+            </header>
+
+            <div id="chatMessages" class="chat-conversation"></div>
+
+            <div class="chat-modern-composer">
+                <div id="selectedFileName" class="chat-selected-file" hidden></div>
+                <div class="chat-modern-input">
+                    <label class="chat-attachment-button" title="Datei hinzufügen" aria-label="Datei hinzufügen">
+                        <span>📎</span>
+                        <input id="chatAttachment" type="file">
+                    </label>
+                    <textarea id="communicationAnswer" rows="1" placeholder="Nachricht schreiben" aria-label="Nachricht schreiben"></textarea>
+                    <button id="sendAnswerBtn" class="chat-modern-send is-disabled" type="button" aria-label="Nachricht senden">↑</button>
+                </div>
+                <p class="chat-input-hint">Enter sendet · Shift + Enter fügt eine neue Zeile ein</p>
+            </div>
+        </section>
+    </section>
+</main>
+<footer class="footer"><p>Bundesamt für Bauten und Logistik BBL · Mieterportal</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

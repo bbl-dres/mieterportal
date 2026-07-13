@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mieterportal - Meine Anträge</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-container">
+
+        <div class="logo-box">
+            <div class="swiss-logo">+</div>
+
+            <div>
+                <strong>Bundesamt für Bauten und Logistik BBL</strong>
+                <p>Mieterportal</p>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="startseite.html">Startseite</a>
+            <a href="Dienstleistungen.html">Dienstleistungen</a>
+            <a href="Meine-antrage.html" class="active">Meine Anträge</a>
+            <a href="informationen.html">Informationen</a>
+            <a href="#">Hilfe</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main class="main-container">
+
+    <section class="page-intro">
+        <p class="small-title">Meine Anträge</p>
+
+        <h1>Meine Anträge</h1>
+
+        <p class="intro-text">
+            Übersicht über Ihre Entwürfe, eingereichten Anträge und offenen Rückfragen.
+        </p>
+    </section>
+
+
+    
+   <!-- Statusfilter -->
+<section class="application-status-tabs">
+
+    <button class="status-tab active" type="button" data-filter="alle">
+        Alle
+        <span>4</span>
+    </button>
+
+    <button class="status-tab" type="button" data-filter="offen">
+        Offen
+        <span>3</span>
+    </button>
+
+    <button class="status-tab" type="button" data-filter="rueckfrage">
+        Rückfrage offen
+        <span>1</span>
+    </button>
+
+    <button class="status-tab" type="button" data-filter="entwurf">
+        Entwurf
+        <span>1</span>
+    </button>
+
+    <button class="status-tab" type="button" data-filter="abgeschlossen">
+        Abgeschlossen
+        <span>1</span>
+    </button>
+
+</section>
+
+
+<!-- Suche und Aktion -->
+<section class="application-toolbar application-toolbar-simple">
+
+    <input 
+        id="applicationSearch"
+        type="search" 
+        placeholder="Antrag suchen"
+    >
+
+    <a href="raumbedarf-antrag.html" class="btn btn-primary">
+        Neuer Antrag
+    </a>
+
+</section>
+
+
+    <!-- Antragsliste -->
+    <section class="application-list" id="applicationList">
+
+        <article class="application-card" data-status="rueckfrage">
+            <div class="application-card-main">
+                <span class="tag red">Rückfrage offen</span>
+
+                <h3>Raumbedarf und bauliche Bedürfnisse</h3>
+
+                <p>
+                    Antrag Nr. RB-2026-001 · Unterbringung
+                </p>
+            </div>
+
+            <div class="application-card-side">
+                <span>Letzte Änderung: 08.07.2026</span>
+
+                <a href="antrag-detail.html" class="btn btn-secondary">
+                    Öffnen
+                </a>
+            </div>
+        </article>
+
+
+        <article class="application-card" data-status="eingereicht">
+            <div class="application-card-main">
+                <span class="tag">Eingereicht</span>
+
+                <h3>Raumbedarf und bauliche Bedürfnisse</h3>
+
+                <p>
+                    Antrag Nr. RB-2026-002 · Unterbringung
+                </p>
+            </div>
+
+            <div class="application-card-side">
+                <span>Letzte Änderung: 03.07.2026</span>
+
+                <a href="antrag-detail.html" class="btn btn-secondary">
+                    Öffnen
+                </a>
+            </div>
+        </article>
+
+
+        <article class="application-card" data-status="entwurf">
+            <div class="application-card-main">
+                <span class="tag">Entwurf</span>
+
+                <h3>Raumbedarf und bauliche Bedürfnisse</h3>
+
+                <p>
+                    Antrag noch nicht eingereicht · Unterbringung
+                </p>
+            </div>
+
+            <div class="application-card-side">
+                <span>Letzte Änderung: 01.07.2026</span>
+
+                <a href="raumbedarf-antrag.html" class="btn btn-secondary">
+                    Weiterbearbeiten
+                </a>
+            </div>
+        </article>
+
+
+        <article class="application-card" data-status="abgeschlossen">
+            <div class="application-card-main">
+                <span class="tag green">Abgeschlossen</span>
+
+                <h3>Raumbedarf und bauliche Bedürfnisse</h3>
+
+                <p>
+                    Antrag Nr. RB-2025-018 · Unterbringung
+                </p>
+            </div>
+
+            <div class="application-card-side">
+                <span>Abgeschlossen: 12.12.2025</span>
+
+                <a href="antrag-detail.html" class="btn btn-secondary">
+                    Anzeigen
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <p>Bundesamt für Bauten und Logistik BBL · Mieterportal</p>
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
