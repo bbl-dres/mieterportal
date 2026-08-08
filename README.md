@@ -2,6 +2,10 @@
 
 Static HTML/CSS/JS prototype of a tenant portal for the Swiss **Bundesamt für Bauten und Logistik (BBL)**. German UI, no framework, no build step — open the files directly.
 
+> [!CAUTION]
+> **This is an unofficial mockup for demonstration purposes only.**
+> All data is fictional. Not all features are fully functional. This project serves as a visual and conceptual prototype — it is not intended for production use.
+
 ## Run
 
 Open [index.html](index.html) (redirects to the app) or serve the folder:
