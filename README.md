@@ -1,40 +1,39 @@
 # Mieterportal
 
-Static HTML/CSS/JS prototype of a tenant portal for the Swiss **Bundesamt für Bauten und Logistik (BBL)**. German UI, no framework, no build step — open the files directly.
+Static HTML/CSS/JavaScript prototype of a tenant portal for the Swiss Bundesamt für Bauten und Logistik (BBL).
 
 > [!CAUTION]
-> **This is an unofficial mockup for demonstration purposes only.**
-> All data is fictional. Not all features are fully functional. This project serves as a visual and conceptual prototype — it is not intended for production use.
+> This is an unofficial mockup for demonstration purposes only. Its records are fictional, not every function is implemented, and it is not intended for production use.
 
-## Run
+## Demo
 
-Open [index.html](index.html) (redirects to the app) or serve the folder:
+**Live demo:** https://bbl-dres.github.io/mieterportal/
+
+## Features
+
+- Browse a catalogue of tenant services and reference information.
+- View and filter submitted applications.
+- Open application details with status and history information.
+- Submit a space-requirement request through a six-step wizard.
+- Follow case communication in a chat-style view.
+- Consult the information pages and price catalogue.
+
+## Run locally
+
+Serve the repository over HTTP:
 
 ```bash
-python -m http.server
+python -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then open <http://localhost:8000/>. The root page redirects to the app in `Version 2/`.
 
-## Structure
+## Prototype notes
 
-The app lives in [`Version 2/`](Version%202/):
+- The app has no backend; its application, chat, and price data are hardcoded mock content.
+- Custom chat folders persist in browser `localStorage`.
+- Some images and icons load from external services and require network access.
 
-| File | Page |
-|------|------|
-| `startseite.html` | Home / start page |
-| `Dienstleistungen.html` | Services catalog |
-| `Meine-antrage.html` | My applications (list + filters) |
-| `antrag-detail.html` | Application detail view |
-| `antrag.html` | Communication / chat |
-| `raumbedarf-antrag.html` | New application wizard (6 steps) |
-| `informationen.html` | Information & references |
-| `preiskatalog.html` | Price catalog |
-| `js/main.js` | All interactivity |
-| `css/style.css` | Styling |
+## License
 
-## Notes
-
-- All data (applications, chats, prices) is hardcoded mock content — no backend.
-- Custom chat folders persist in `localStorage`.
-- Images and icons load from external CDNs (BBL asset server, Bootstrap Icons).
+No software license has been specified for this repository. Contact the repository owner before copying, modifying, or redistributing its contents.
