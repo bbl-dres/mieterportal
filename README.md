@@ -1,5 +1,8 @@
 # Mieterportal
 
+[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-2ea44f?logo=github&logoColor=white)](https://bbl-dres.github.io/mieterportal/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Static HTML/CSS/JavaScript prototype of a tenant portal for the Swiss Bundesamt für Bauten und Logistik (BBL).
 
 > [!CAUTION]
@@ -36,4 +39,4 @@ Then open <http://localhost:8000/>. The root page redirects to the app in `Versi
 
 ## License
 
-No software license has been specified for this repository. Contact the repository owner before copying, modifying, or redistributing its contents.
+Licensed under the [MIT License](LICENSE).
