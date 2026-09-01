@@ -3,10 +3,10 @@
 [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-2ea44f?logo=github&logoColor=white)](https://bbl-dres.github.io/mieterportal/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Static HTML/CSS/JavaScript prototype of a tenant portal for the Swiss Bundesamt für Bauten und Logistik (BBL).
-
 > [!CAUTION]
 > This is an unofficial mockup for demonstration purposes only. Its records are fictional, not every function is implemented, and it is not intended for production use.
+
+Static HTML/CSS/JavaScript prototype of a tenant portal for the Swiss Bundesamt für Bauten und Logistik (BBL).
 
 ## Demo
 
